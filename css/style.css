@@ -1,0 +1,90 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  body.dark {
+    background: #1e1e2f;
+    color: #f4f4f4;
+  }
+  
+  header {
+    background: linear-gradient(135deg, #020202, #5c6bc0);
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  h3 {
+    color: #000000;
+  }
+  
+  body.dark h3 {
+    color: #aab6fe;
+  }
+  
+  button#dark-mode-toggle {
+    background: #000000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 1rem auto;
+    display: block;
+    border-radius: 5px;
+  }
+  
+  .carousel {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    margin-top: 1rem;
+  }
+  
+  .carousel-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+  }
+  
+  .carousel-track img {
+    width: 180px;
+    height: 180px;
+    margin: 0 1rem;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    background: white;
+  }
+  
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  
+  /* Responsivo */
+  @media (max-width: 600px) {
+    header h1, header h2 {
+      font-size: 1.2rem;
+    }
+  
+    section {
+      padding: 1rem;
+    }
+  
+    .carousel-track img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
